@@ -1,0 +1,1 @@
+{'email': 'uhoward@example.org', 'password': '_X7uHarOa2', 'name': 'Samuel Baker', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTRhZDFhOWVkMjgwMDAxYjRiODdjZCIsImlhdCI6MTcyNjI2MjU1NCwiZXhwIjoxNzI2MjYzNzU0fQ.St5Uet-kotTCZtEpsjueL6oT1hymErXi_KF35AxNOU4'}

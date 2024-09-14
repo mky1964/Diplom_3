@@ -1,0 +1,3 @@
+{'email': 'barbara88@example.org', 'password': '#93jLNVv8H', 'name': 'Terri Davidson', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTUyY2IxOWVkMjgwMDAxYjRiODkxZCIsImlhdCI6MTcyNjI5NTIxNywiZXhwIjoxNzI2Mjk2NDE3fQ.5Kn8d5mXbphmSg-kyUAsdbk8bYtU14FGymx1IGpsWdA'}
+118581
+118582

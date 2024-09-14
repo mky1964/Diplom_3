@@ -1,0 +1,1 @@
+{'email': 'anthonywagner@example.net', 'password': 'i1N_P38#)@', 'name': 'Mark Flores', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTRhY2FjOWVkMjgwMDAxYjRiODdjNiIsImlhdCI6MTcyNjI2MjQ0NCwiZXhwIjoxNzI2MjYzNjQ0fQ.uIQz0tDTGtgGjC35a0F1aMmM0qWJ3Ndo17fidvjELg0'}

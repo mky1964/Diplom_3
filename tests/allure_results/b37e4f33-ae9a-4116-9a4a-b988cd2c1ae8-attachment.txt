@@ -1,0 +1,1 @@
+{'email': 'robindawson@example.org', 'password': '4a37!Ftj@G', 'name': 'Debbie Phillips', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTRhY2U2OWVkMjgwMDAxYjRiODdjYSIsImlhdCI6MTcyNjI2MjUwMiwiZXhwIjoxNzI2MjYzNzAyfQ.FPKfpNIAnqTaNgBSAhQ_6l0mTsqgxsUmWaDES97IjOU'}

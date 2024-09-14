@@ -1,0 +1,3 @@
+{'email': 'kaitlynlam@example.org', 'password': 'A*_9SQlrfF', 'name': 'Sara Jones', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTUyZDJhOWVkMjgwMDAxYjRiODkyNyIsImlhdCI6MTcyNjI5NTMzOCwiZXhwIjoxNzI2Mjk2NTM4fQ.9MBhMR1O3lnmxxJsUw1bPYpTmjf39Nmhmz1NQyuZEOY'}
+398
+399

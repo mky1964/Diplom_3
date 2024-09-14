@@ -1,0 +1,1 @@
+{'email': 'jesse14@example.com', 'password': 'ADT3FAQfo*', 'name': 'Anthony Miller', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTUyYzMyOWVkMjgwMDAxYjRiODkxNCIsImlhdCI6MTcyNjI5NTA5MCwiZXhwIjoxNzI2Mjk2MjkwfQ.OAXOSfrUMTSw80iN2r6RRx6vXSGpwHjzZZ8AnYQPI3w'}
