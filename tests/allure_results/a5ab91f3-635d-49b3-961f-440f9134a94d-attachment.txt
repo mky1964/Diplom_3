@@ -1,2 +1,0 @@
-{'email': 'rivasanita@example.net', 'password': '!8#EOw0OTe', 'name': 'Scott Zimmerman', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTRiNDI0OWVkMjgwMDAxYjRiODgxMyIsImlhdCI6MTcyNjI2NDM1NiwiZXhwIjoxNzI2MjY1NTU2fQ.DtHkkNj_x-bj9HTtNBOAHTmeHxhozK-8bSVrGN7OWkg'}
-9999

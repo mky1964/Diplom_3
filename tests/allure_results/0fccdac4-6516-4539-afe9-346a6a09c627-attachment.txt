@@ -1,1 +1,0 @@
-{'email': 'gcarey@example.org', 'password': 'JTGf!+gs!4', 'name': 'Russell Carney', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTRhYzQ0OWVkMjgwMDAxYjRiODdiZSIsImlhdCI6MTcyNjI2MjM0MCwiZXhwIjoxNzI2MjYzNTQwfQ.DVgUI6Zao602OtcsgOeI_pqkbfDSPu52aPvHJDQa02o'}

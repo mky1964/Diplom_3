@@ -4,7 +4,7 @@ import pytest
 from selenium import webdriver
 import allure
 from locators.constants import Constants
-#import faker
+
 
 
 
@@ -39,4 +39,4 @@ def new_user():
         "name": name
     }
     # возвращаем список
-    yield payload
+    return payload

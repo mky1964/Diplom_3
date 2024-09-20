@@ -1,1 +1,0 @@
-{'email': 'christopher04@example.net', 'password': '#2oLgiOe#7', 'name': 'Stephanie Sullivan', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTUyYmYwOWVkMjgwMDAxYjRiODkxMCIsImlhdCI6MTcyNjI5NTAyNCwiZXhwIjoxNzI2Mjk2MjI0fQ.Oxy6mjCev6FX1CNNLGEQiOpwBEjszGJD46p-fJsICx0'}

@@ -1,1 +1,0 @@
-{'email': 'fvazquez@example.org', 'password': 'x*FgSVNF)9', 'name': 'Christine Rice', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTRiMzA4OWVkMjgwMDAxYjRiODgwYiIsImlhdCI6MTcyNjI2NDA3MiwiZXhwIjoxNzI2MjY1MjcyfQ.mlsry_JbXama6LjI6B2KBKOoKSN1Y0s8WaJyINcwqHg'}

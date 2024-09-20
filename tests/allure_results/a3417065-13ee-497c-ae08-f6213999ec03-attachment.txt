@@ -1,1 +1,0 @@
-{'email': 'hessmichael@example.net', 'password': '(s2iNYdldZ', 'name': 'Christine Stanley', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTRhYzc2OWVkMjgwMDAxYjRiODdjMiIsImlhdCI6MTcyNjI2MjM5MCwiZXhwIjoxNzI2MjYzNTkwfQ.uoPazTm0T7njwAyOB8n_Jh4TKiRZUYnL7tikD_jUD_o'}

@@ -1,3 +1,0 @@
-{'email': 'michelle38@example.net', 'password': ')0GhSOPk@4', 'name': 'Alexander Bailey', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTUyY2YxOWVkMjgwMDAxYjRiODkyMiIsImlhdCI6MTcyNjI5NTI4MSwiZXhwIjoxNzI2Mjk2NDgxfQ.-o1SXmbHycnSt5OoWAvqnopSGiTSqECQPBEVdHkU2_M'}
-396
-397

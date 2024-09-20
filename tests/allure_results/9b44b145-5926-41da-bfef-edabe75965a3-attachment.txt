@@ -1,3 +1,0 @@
-{'email': 'munozkaren@example.net', 'password': '4844RgHh)Y', 'name': 'Michael Allen', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTUyYzc4OWVkMjgwMDAxYjRiODkxOCIsImlhdCI6MTcyNjI5NTE2MCwiZXhwIjoxNzI2Mjk2MzYwfQ.pcHCjLDFXMzJ77i8gHs_SrUtrGLOW5jc_ORPzviRwuU'}
-118579
-118580

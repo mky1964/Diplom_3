@@ -1,2 +1,0 @@
-{'email': 'jim82@example.net', 'password': '#Q8dZXzbiY', 'name': 'Bryce Baker', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTRiNDU3OWVkMjgwMDAxYjRiODgxNiIsImlhdCI6MTcyNjI2NDQwNywiZXhwIjoxNzI2MjY1NjA3fQ.Pqgf3_d-UGcwScSqOk_I9LB8WQoZo1aQPdNvAlpmtjg'}
-118523

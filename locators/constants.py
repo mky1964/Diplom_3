@@ -10,4 +10,3 @@ class Constants:
     HASH_INGREDIENT_MEAT_MOLLUSC = "61c0c5a71d1f82001bdaaa6f"
     HASH_INGREDIENT_SPICYSAUCE = "61c0c5a71d1f82001bdaaa72"
 
-#  div class="Modal_modal_overlay__x2ZCr"
