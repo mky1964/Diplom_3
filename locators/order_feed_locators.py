@@ -11,7 +11,11 @@ class OrderFeedLocators:
                                   '//div[@class="undefined mb-15"]/p[@class="OrderFeed_number__2MbrQ text text_type_digits-large"]')
     #Количество заказов за всё время
     ORDER_NUMBER_TODAY = (By.XPATH, '//div[3]/p[2][@class="OrderFeed_number__2MbrQ text text_type_digits-large"]')#Количество заказов на сегодня
-    ORDER_READY_NUMBER = (By.XPATH, '//li[1][@class="text text_type_digits-default mb-2"]')
+    ORDER_READY_NUMBER = (By.XPATH, '//ul[2]/li[1][@class="text text_type_digits-default mb-2"]')
 
-    ORDER_NUMBER_IN_WORK = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[1]/ul[2]/li')
+    ASSEMBLE_BURGER_HEADLINE = (By.XPATH,
+                                '//h1[@class="text text_type_main-large mb-5 mt-10" and text()="Соберите бургер"]')
+    #ORDER_NUMBER_IN_WORK_TEXT = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[1]/ul[2]/li[1]')
+    ORDER_NUMBER_IN_WORK = (By.XPATH, '//ul[2]/li[contains(text(), "0")]')
+    #ORDER_NUMBER_IN_WORK = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[1]/ul[2]/li[contains(text(), "0")]')
 

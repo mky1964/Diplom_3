@@ -20,4 +20,6 @@ class RestoringPasswordPageLocators:
                                                           )#Не подсвеченный плейсхолдер Password
     RESTORING_PASSWORD_PLACEHOLDER_PASSWORD_ACTIVE = (By.XPATH, '//div[contains(@class, "input pr-6 pl-6 input_type_text")]'
                                                       )#Подсвеченный плейсхолдер Password
+    PASSWORD_RESTORE_BUTTON = (By.XPATH, "//a[text()='Восстановить пароль']")#"Кнопка "Восстановить пароль" в Личном кабинете вкладка "Вход"
+    RESTORING_PASSWORD_HEADLINE = (By.XPATH, "//h2[text()='Восстановление пароля']")#Хедлайн "Восстановление пароля" в Личном кабинете вкладка "Восстановление пароля"
 
