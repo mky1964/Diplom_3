@@ -1,8 +1,8 @@
-import time
+
 import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from locators.constants import Constants
+
 from locators.main_page_locators import MainPageLocators
 from pages.base_page import BasePage
 
@@ -14,16 +14,28 @@ class MainPage(BasePage):
         self.click_on_element_located(MainPageLocators.ENTER_ACCOUNT_BUTTON, delay_time)
 
     @allure.step('click_on_enter_account_button')
-    def click_on_order_feed_from_main_page(self, delay_time):  #Кликнуть переход "Лента заказов"
-        self.wait_of_vanishing_of_overlay_base(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE,60)
-        self.click_on_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, delay_time)
+    def click_on_order_feed_from_main_page(self, driver):  #Кликнуть переход "Лента заказов"
+        self.wait_of_vanishing_of_overlay_base(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE, 100)
+        self.scroll_to_element_located(driver, MainPageLocators.CHEESE_WITH_MOLD, 100)
+        self.scroll_to_element_located(driver, MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
+        self.click_on_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
 
     def click_on_set_order_button(self, delay_time):  #Кликнуть переход "Оформить заказ"
         self.click_on_element_located(MainPageLocators.PLACE_ORDER_BUTTON, delay_time)
     @allure.step('click_on_crater_bun_button')
-    def click_on_crater_bun_button(self, delay_time):  #Кликнуть по кратерной булке
-
-        self.click_on_element_located(MainPageLocators.CRATER_BUN_ICON, delay_time)
+    def click_on_crater_bun_button(self, driver):  #Кликнуть по кратерной булке
+        self.wait_of_vanishing_of_overlay_base(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE, 100)
+        self.scroll_to_element_located(driver, MainPageLocators.CHEESE_WITH_MOLD, 100)
+        self.scroll_to_element_located(driver, MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
+        self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
+        self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
+        self.click_on_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
 
     @allure.step('click_on_close_button_on_ingredient_detail')
     def click_on_close_button_on_ingredient_detail(self, delay_time):  #Кликнуть по крестику на окне с ингредиентами
@@ -58,21 +70,37 @@ class MainPage(BasePage):
         self.find_element_located(MainPageLocators.ENTER_ACCOUNT_BUTTON, delay_time)
 
     @allure.step('click_on_private_account_button')
-    def click_on_private_account_button_main_page(self, delay_time):  #Кликнуть переход  на "Личный Кабинет"
-        self.click_on_element_located(MainPageLocators.PRIVATE_ACCOUNT_BUTTON, delay_time)
+    def click_on_private_account_button_main_page(self, driver):  #Кликнуть переход  на "Личный Кабинет"
+        self.wait_of_vanishing_of_overlay_base(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE, 100)
+        self.scroll_to_element_located(driver, MainPageLocators.CHEESE_WITH_MOLD, 100)
+        self.scroll_to_element_located(driver, MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
+        self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
+        self.find_element_located(MainPageLocators.PRIVATE_ACCOUNT_BUTTON, 100)
+        self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
+        self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
+        self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
+        self.find_element_located(MainPageLocators.PRIVATE_ACCOUNT_BUTTON, 100)
+        self.click_on_element_located(MainPageLocators.PRIVATE_ACCOUNT_BUTTON, 100)
+
+
+
     @allure.step('set_an_order_ui')
-    def set_an_order_ui(self,driver, delay_time):
-        WebDriverWait(driver, 20).until_not(
-            EC.visibility_of_element_located(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE))
+    def set_an_order_ui(self, driver):
+        #self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 60)
 
-        self.drag_and_drop_element(MainPageLocators.CRATER_BUN_ICON, MainPageLocators.ORDER_BUCKET_PLACE, delay_time)
-        WebDriverWait(driver, 200).until_not(EC.visibility_of_element_located(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE))
-
-        self.click_on_element_located(MainPageLocators.PLACE_ORDER_BUTTON, delay_time)
+        self.scroll_to_element_located(driver, MainPageLocators.CHEESE_WITH_MOLD, 100)
+        self.scroll_to_element_located(driver, MainPageLocators.CRATER_BUN_ICON, 100)
+        self.drag_and_drop_element(MainPageLocators.CRATER_BUN_ICON, MainPageLocators.ORDER_BUCKET_PLACE, 100)
+        self.find_element_located(MainPageLocators.PLACE_ORDER_BUTTON, 10)
+        self.click_on_element_located(MainPageLocators.PLACE_ORDER_BUTTON, 100)
 
 
     @allure.step('close_card_with_new_order')
-    def close_card_with_new_order(self, driver, delay_time):
+    def close_card_with_new_order(self, delay_time):
         self.click_on_element_located(MainPageLocators.CLOSING_ORDER_CARD_BUTTON, delay_time)
 
     @allure.step('checking_of_presence_of_order_feed_main_headline')

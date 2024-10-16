@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class ConstructorLocators:
 
     ASSEMBLE_BURGER_HEADLINE = (By.XPATH,

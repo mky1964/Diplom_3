@@ -1,8 +1,7 @@
-import time
 import allure
 from locators.account_page_locators import AccountPageLocators
 from pages.base_page import BasePage
-from conftest import new_user
+
 
 
 class Account(BasePage):
@@ -12,8 +11,18 @@ class Account(BasePage):
         self.click_on_element_located(AccountPageLocators.PASSWORD_RESTORE_BUTTON, delay_time)
 
     @allure.step('click_on_enter_account_button')
-    def click_on_orders_history_button(self, delay_time):  #Кликнуть История заказов из Личного кабинета
-        self.click_on_element_located(AccountPageLocators.ORDERS_HISTORY_BUTTON, delay_time)
+    def click_on_orders_history_button(self):  #Кликнуть История заказов из Личного кабинета
+        self.wait_of_vanishing_of_overlay_base(AccountPageLocators.MODAL_OVERLAY_MAIN_PAGE, 100)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.wait_of_vanishing_of_overlay_base(AccountPageLocators.MODAL_OVERLAY_MAIN_PAGE, 100)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.click_on_element_located(AccountPageLocators.ORDERS_HISTORY_BUTTON, 100)
 
     @allure.step('click_on_enter_account_button')
     def click_on_constructor_button_from_account(self, delay_time):  #Кликнуть конструктор
@@ -21,12 +30,22 @@ class Account(BasePage):
 
 
     @allure.step('click_on_enter_account_button')
-    def click_on_orders_feed(self, delay_time):  #Кликнуть "Лента заказов"
+    def click_on_orders_feed(self):  #Кликнуть "Лента заказов"
         self.wait_of_vanishing_of_overlay_base(AccountPageLocators.MODAL_OVERLAY_MAIN_PAGE,120)
-        self.click_on_element_located(AccountPageLocators.ORDER_FEED_BUTTON, delay_time)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.click_on_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
     @allure.step('login_account_from_main_page')
-    def login_account_from_main_page(self, new_user, time_delay):#Залогинить пользователя из main_page
+    def login_account_from_main_page(self,driver, new_user, time_delay):#Залогинить пользователя из main_page
         self.wait_of_vanishing_of_overlay_base(AccountPageLocators.MODAL_OVERLAY_MAIN_PAGE, 10)
+        self.scroll_to_element_located(driver, AccountPageLocators.CHEESE_WITH_MOLD, 100)
+        self.scroll_to_element_located(driver, AccountPageLocators.CRATER_BUN_ICON, 100)
         self.click_on_element_located(AccountPageLocators.PRIVATE_ACCOUNT_BUTTON, time_delay)
         self.find_element_located(AccountPageLocators.ENTER_BUTTON, 10)
         self.wait_of_vanishing_of_overlay_base(AccountPageLocators.MODAL_OVERLAY_MAIN_PAGE, 10)
@@ -39,9 +58,19 @@ class Account(BasePage):
 
 
 
+
     @allure.step('login_account_from_main_page')
-    def exit_from_account(self, driver, delay_time):#Залогинить пользователя из main_page
-        self.click_on_element_located(AccountPageLocators.EXIT_BUTTON_FROM_ACCOUNT, delay_time)
+    def exit_from_account(self):#Залогинить пользователя из main_page
+        self.wait_of_vanishing_of_overlay_base(AccountPageLocators.MODAL_OVERLAY_MAIN_PAGE,120)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
+        self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
+        self.click_on_element_located(AccountPageLocators.EXIT_BUTTON_FROM_ACCOUNT, 100)
 
     @allure.step('checking_of_presence_of_order_history_button_in_private_account')
     def checking_of_presence_of_order_history_button_in_private_account(self, delay_time):

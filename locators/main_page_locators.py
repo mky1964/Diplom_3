@@ -19,6 +19,7 @@ class MainPageLocators:
     INGREDIENT_DETAILS_CRATER_BUN = (By.XPATH,
                                  '//h2[@class="Modal_modal__title_modified__3Hjkd Modal_modal__title__2L34m text text_type_main-large pl-10"]')
     ID_ORDER_HEADER = (By.XPATH, '//p[@class="undefined text text_type_main-medium mb-15"]')
+    CHEESE_WITH_MOLD = (By.XPATH, "//img[@alt='Сыр с астероидной плесенью']")
 
 
 

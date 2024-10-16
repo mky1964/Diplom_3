@@ -17,3 +17,6 @@ class AccountPageLocators:
     LATEST_ORDER_NUMBER = (By.XPATH,
                            '//li[1]/a/div[@class="OrderHistory_textBox__3lgbs mb-6"]/p[@class="text text_type_digits-default"]')  # Номер последнего заказа в истории заказов
 
+    CHEESE_WITH_MOLD = (By.XPATH, "//img[@alt='Сыр с астероидной плесенью']")
+    CRATER_BUN_ICON = (By.XPATH,
+                       '//p[@class="BurgerIngredient_ingredient__text__yp3dH" and text()="Краторная булка N-200i"]')

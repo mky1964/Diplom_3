@@ -30,12 +30,14 @@ class BasePage:
 
     @allure.step('click_on_element_located')
     def click_on_element_located(self, locator, delay_time):
+        WebDriverWait(self.driver, delay_time).until(EC.element_to_be_clickable(locator))
         element = self.find_element_located(locator, delay_time)
         element.click()
 
     @allure.step('get_text_from_element_located')
     def get_text_from_element_located(self, locator):
-        return self.find_element_located(locator, delay_time=5).text
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(locator))
+        return self.find_element_located(locator, delay_time=10).text
 
     @allure.step('set_text_to_element_located')
     def set_text_to_element_located(self, locator, text, delay_time):
@@ -44,7 +46,7 @@ class BasePage:
 
     @allure.step('drag_and_drop_element')
     def drag_and_drop_element(self, element_from, element_to, delay_time):
-        from_element = self.find_element_located(element_from, delay_time=10)
+        from_element = self.find_element_located(element_from, delay_time)
         to_element = self.find_element_located(element_to, delay_time)
         ActionChains(self.driver).drag_and_drop(from_element, to_element).perform()
 
@@ -61,9 +63,17 @@ class BasePage:
 
 
 
-    @allure.step('click_on_close_button_on_ingredient_detail')
+    @allure.step('wait_of_vanishing_of_overlay_base')
     def wait_of_vanishing_of_overlay_base(self, overlay_locator, delay_time):  #Ожидание пропадания всплывающего объекта
         WebDriverWait(self.driver, delay_time).until_not(EC.visibility_of_element_located(overlay_locator))
+
+
+    @allure.step('format_locator')
+    def format_locator(self, locator_1, num):
+        method, locator = locator_1
+        locator = locator.format(num)
+        return (method, locator)
+
 
 
 

@@ -4,6 +4,7 @@ class OrderFeedLocators:
 
 
 
+
     ORDER_FEED_MAIN_HEADLINE = (By.XPATH, '//h1[@class="text text_type_main-large mt-10 mb-5"]')#"ЛЕНТА ЗАКАЗОВ" - на странице Ленты заказов
     ORDER_IN_ORDER_FEED_NUM_1 = (By.XPATH, '//li[1][@class="OrderHistory_listItem__2x95r mb-6"]')#Заказ (первый сверху) в ленте
     ORDER_DETAIL_CARD_NUMBER = (By.XPATH, '//p[@class="text text_type_digits-default mb-10 mt-5"]')#Номер в карточке ингредиентов в Ленте заказов
@@ -15,7 +16,6 @@ class OrderFeedLocators:
 
     ASSEMBLE_BURGER_HEADLINE = (By.XPATH,
                                 '//h1[@class="text text_type_main-large mb-5 mt-10" and text()="Соберите бургер"]')
-    #ORDER_NUMBER_IN_WORK_TEXT = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[1]/ul[2]/li[1]')
     ORDER_NUMBER_IN_WORK = (By.XPATH, '//ul[2]/li[contains(text(), "0")]')
-    #ORDER_NUMBER_IN_WORK = (By.XPATH, '//*[@id="root"]/div/main/div/div/div/div[1]/ul[2]/li[contains(text(), "0")]')
+    TEMPLATE_NUMBER = (By.XPATH, '//li[{}][@class="OrderHistory_listItem__2x95r mb-6"]')
 

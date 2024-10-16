@@ -1,9 +1,9 @@
 
-from faker import Faker
 import pytest
 from selenium import webdriver
 import allure
-from locators.constants import Constants
+from constants.constants import Constants
+from api import Api
 
 
 
@@ -23,20 +23,25 @@ def driver(request):
     yield driver
     driver.quit()
 
-@allure.step('new_user')
+@allure.step('new_user_registration_and_setting_an_order')
 @pytest.fixture
-def new_user():
+def new_user_registration_and_setting_an_order():
+    api_1 = Api()
+    new_user_with_accesstoken = api_1.registration_of_new_user()
+    api_1.set_an_order_api(new_user_with_accesstoken, 60)
+    yield new_user_with_accesstoken
+    api_1.deleting_of_new_user(new_user_with_accesstoken)
 
-    faker_1 = Faker()
-    # генерируем логин, пароль и имя курьера
-    email = faker_1.email()
-    password = faker_1.password(10)
-    name = faker_1.name()
-    # собираем тело запроса
-    payload = {
-        "email": email,
-        "password": password,
-        "name": name
-    }
-    # возвращаем список
-    return payload
+@allure.step('new_user_registration_and_setting_an_order')
+@pytest.fixture
+def new_user_registration_without_order():
+    api_1 = Api()
+    new_user_with_accesstoken = api_1.registration_of_new_user()
+    yield new_user_with_accesstoken
+    api_1.deleting_of_new_user(new_user_with_accesstoken)
+
+
+
+
+
+

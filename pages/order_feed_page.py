@@ -1,6 +1,4 @@
-import time
 import allure
-from selenium.webdriver.common.by import By
 from locators.order_feed_locators import OrderFeedLocators
 from pages.base_page import BasePage
 
@@ -17,7 +15,8 @@ class OrderFeedPage(BasePage):
     def find_number_in_order_feed_by_order_number_from_history(self, number_order_in_history): #Найти заказ в ленте по номеру последнего заказа из истории
         num = ''
         for i in range(1, 50):
-            num = self.find_element_presented((By.XPATH, f'//li[{i}][@class="OrderHistory_listItem__2x95r mb-6"]'), 5).text
+
+            num = self.find_element_presented((self.format_locator(OrderFeedLocators.TEMPLATE_NUMBER,i)), 5).text
             if number_order_in_history in num:
                 result = True
                 break
@@ -26,21 +25,26 @@ class OrderFeedPage(BasePage):
         return num #Номер карточки в ленте заказов
 
     @allure.step('get_number_of_orders_all_time_in_order_feed')
-    def get_number_of_orders_all_time_in_order_feed(self, delay_time):  #Получить количество заказов за всё время из Ленты заказов
+    def get_number_of_orders_all_time_in_order_feed(self):  #Получить количество заказов за всё время из Ленты заказов
+        self.get_number_of_orders_today_in_order_feed()
+        self.find_element_located(OrderFeedLocators.ORDER_IN_ORDER_FEED_NUM_1, 100)
         number_of_orders_all_time = int(
-            self.find_element_presented(OrderFeedLocators.ORDER_NUMBER_ALL_TIME, delay_time).text)
+            self.find_element_presented(OrderFeedLocators.ORDER_NUMBER_ALL_TIME, 100).text)
         return number_of_orders_all_time
 
     @allure.step('get_number_of_orders_today_in_order_feed')
-    def get_number_of_orders_today_in_order_feed(self, delay_time):  #Получить количество заказов за сегодня из Ленты заказов
+    def get_number_of_orders_today_in_order_feed(self):  #Получить количество заказов за сегодня из Ленты заказов
+        self.find_element_located(OrderFeedLocators.ORDER_NUMBER_TODAY,100)
+        self.find_element_located(OrderFeedLocators.ORDER_NUMBER_TODAY,100)
         number_of_orders_today = int(
-            self.find_element_presented(OrderFeedLocators.ORDER_NUMBER_TODAY, delay_time).text)
+            self.find_element_presented(OrderFeedLocators.ORDER_NUMBER_TODAY, 100).text)
         return number_of_orders_today
 
     @allure.step('get_orders_number_in_work_in_order_feed_actual')
-    def get_orders_number_in_work_in_order_feed_actual(self, delay_time):  #Получить номер заказа в работе в Ленте заказов
-
-        order_number_in_work_actual = self.find_element_presented(OrderFeedLocators.ORDER_NUMBER_IN_WORK, delay_time).text
+    def get_orders_number_in_work_in_order_feed_actual(self):  #Получить номер заказа в работе в Ленте заказов
+        #self.get_number_of_orders_today_in_order_feed()
+        #self.find_element_located(OrderFeedLocators.ORDER_NUMBER_IN_WORK, 100)
+        order_number_in_work_actual = self.find_element_presented(OrderFeedLocators.ORDER_NUMBER_IN_WORK, 100).text
         number = order_number_in_work_actual
         return str(number)
 
