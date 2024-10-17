@@ -10,12 +10,12 @@ class TestPasswordRestore:
     @allure.title('test_restore_password_button')
     @allure.description('Позитивный тест. Восстановление пароля.'
                         ' Переход по кнопке "Восстановить пароль" на страницу восстановления пароля')
-    def test_restore_password_button(self, driver):
+    def test_restore_password_button(self,driver):
         main_page_1 = MainPage(driver)
         account_1 = Account(driver)
         restore_1 = RestorePassword(driver)
         main_page_1.find_enter_account_button(20)
-        main_page_1.click_on_private_account_button_main_page(driver)#Кликнуть переход "Вход в Аккаунт" из Main page
+        main_page_1.click_on_private_account_button_main_page()#Кликнуть переход "Вход в Аккаунт" из Main page
         account_1.click_on_restore_password_button(30)#Кликнуть Восстановление пароля во вкладке "ВХОД" Личного кабинета
         assert restore_1.checking_of_presence_of_password_restoring_headline(30), f'Заголовок "Восстановление пароля" не виден'
 

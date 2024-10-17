@@ -42,10 +42,10 @@ class Account(BasePage):
         self.find_element_located(AccountPageLocators.CONSTRUCTOR_BUTTON, 100)
         self.click_on_element_located(AccountPageLocators.ORDER_FEED_BUTTON, 100)
     @allure.step('login_account_from_main_page')
-    def login_account_from_main_page(self,driver, new_user, time_delay):#Залогинить пользователя из main_page
+    def login_account_from_main_page(self, new_user, time_delay):#Залогинить пользователя из main_page
         self.wait_of_vanishing_of_overlay_base(AccountPageLocators.MODAL_OVERLAY_MAIN_PAGE, 10)
-        self.scroll_to_element_located(driver, AccountPageLocators.CHEESE_WITH_MOLD, 100)
-        self.scroll_to_element_located(driver, AccountPageLocators.CRATER_BUN_ICON, 100)
+        self.scroll_to_element_located(AccountPageLocators.CHEESE_WITH_MOLD, 100)
+        self.scroll_to_element_located(AccountPageLocators.CRATER_BUN_ICON, 100)
         self.click_on_element_located(AccountPageLocators.PRIVATE_ACCOUNT_BUTTON, time_delay)
         self.find_element_located(AccountPageLocators.ENTER_BUTTON, 10)
         self.wait_of_vanishing_of_overlay_base(AccountPageLocators.MODAL_OVERLAY_MAIN_PAGE, 10)

@@ -22,9 +22,9 @@ class BasePage:
                                                             message=f'Not found {locator}')
 
     @allure.step('scroll_to_element_located')
-    def scroll_to_element_located(self, driver, locator, delay_time):
+    def scroll_to_element_located(self,  locator, delay_time):
         element = self.find_element_located(locator, delay_time)
-        driver.execute_script("arguments[0].scrollIntoView();", element)
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)
         return WebDriverWait(self.driver, delay_time).until(EC.visibility_of_element_located(locator),
                                                             message=f'Not found {locator}')
 

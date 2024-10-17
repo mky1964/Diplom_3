@@ -14,10 +14,10 @@ class MainPage(BasePage):
         self.click_on_element_located(MainPageLocators.ENTER_ACCOUNT_BUTTON, delay_time)
 
     @allure.step('click_on_enter_account_button')
-    def click_on_order_feed_from_main_page(self, driver):  #Кликнуть переход "Лента заказов"
+    def click_on_order_feed_from_main_page(self):  #Кликнуть переход "Лента заказов"
         self.wait_of_vanishing_of_overlay_base(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE, 100)
-        self.scroll_to_element_located(driver, MainPageLocators.CHEESE_WITH_MOLD, 100)
-        self.scroll_to_element_located(driver, MainPageLocators.CRATER_BUN_ICON, 100)
+        self.scroll_to_element_located(MainPageLocators.CHEESE_WITH_MOLD, 100)
+        self.scroll_to_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
         self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
         self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
         self.click_on_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
@@ -25,10 +25,10 @@ class MainPage(BasePage):
     def click_on_set_order_button(self, delay_time):  #Кликнуть переход "Оформить заказ"
         self.click_on_element_located(MainPageLocators.PLACE_ORDER_BUTTON, delay_time)
     @allure.step('click_on_crater_bun_button')
-    def click_on_crater_bun_button(self, driver):  #Кликнуть по кратерной булке
+    def click_on_crater_bun_button(self):  #Кликнуть по кратерной булке
         self.wait_of_vanishing_of_overlay_base(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE, 100)
-        self.scroll_to_element_located(driver, MainPageLocators.CHEESE_WITH_MOLD, 100)
-        self.scroll_to_element_located(driver, MainPageLocators.CRATER_BUN_ICON, 100)
+        self.scroll_to_element_located(MainPageLocators.CHEESE_WITH_MOLD, 100)
+        self.scroll_to_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
         self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
         self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
         self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
@@ -42,8 +42,8 @@ class MainPage(BasePage):
         self.click_on_element_located(MainPageLocators.CLOSING_BUTTON_INGREDIENT_DETAILS, delay_time)
 
     @allure.step('click_on_close_button_on_ingredient_detail')
-    def wait_of_vanishing_of_overlay(self, driver, delay_time):  #Ожидание пропадания всплывающего объекта
-        WebDriverWait(driver, delay_time).until_not(EC.visibility_of_element_located(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE))
+    def wait_of_vanishing_of_overlay(self, delay_time):  #Ожидание пропадания всплывающего объекта
+        self.wait_of_vanishing_of_overlay_base(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE, delay_time)
 
     @allure.step('get_count_number_of_crater_bun_in_constructor')
     def get_count_number_of_crater_bun_in_constructor(self, delay_time):  # Получение значения счетчика Краторной булки
@@ -70,10 +70,10 @@ class MainPage(BasePage):
         self.find_element_located(MainPageLocators.ENTER_ACCOUNT_BUTTON, delay_time)
 
     @allure.step('click_on_private_account_button')
-    def click_on_private_account_button_main_page(self, driver):  #Кликнуть переход  на "Личный Кабинет"
+    def click_on_private_account_button_main_page(self):  #Кликнуть переход  на "Личный Кабинет"
         self.wait_of_vanishing_of_overlay_base(MainPageLocators.MODAL_OVERLAY_MAIN_PAGE, 100)
-        self.scroll_to_element_located(driver, MainPageLocators.CHEESE_WITH_MOLD, 100)
-        self.scroll_to_element_located(driver, MainPageLocators.CRATER_BUN_ICON, 100)
+        self.scroll_to_element_located(MainPageLocators.CHEESE_WITH_MOLD, 100)
+        self.scroll_to_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
         self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
         self.find_element_located(MainPageLocators.ORDERS_FEED_FROM_MAIN_BUTTON, 100)
         self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
@@ -89,11 +89,9 @@ class MainPage(BasePage):
 
 
     @allure.step('set_an_order_ui')
-    def set_an_order_ui(self, driver):
-        #self.find_element_located(MainPageLocators.CRATER_BUN_ICON, 60)
-
-        self.scroll_to_element_located(driver, MainPageLocators.CHEESE_WITH_MOLD, 100)
-        self.scroll_to_element_located(driver, MainPageLocators.CRATER_BUN_ICON, 100)
+    def set_an_order_ui(self):
+        self.scroll_to_element_located(MainPageLocators.CHEESE_WITH_MOLD, 100)
+        self.scroll_to_element_located(MainPageLocators.CRATER_BUN_ICON, 100)
         self.drag_and_drop_element(MainPageLocators.CRATER_BUN_ICON, MainPageLocators.ORDER_BUCKET_PLACE, 100)
         self.find_element_located(MainPageLocators.PLACE_ORDER_BUTTON, 10)
         self.click_on_element_located(MainPageLocators.PLACE_ORDER_BUTTON, 100)

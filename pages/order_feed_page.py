@@ -42,8 +42,6 @@ class OrderFeedPage(BasePage):
 
     @allure.step('get_orders_number_in_work_in_order_feed_actual')
     def get_orders_number_in_work_in_order_feed_actual(self):  #Получить номер заказа в работе в Ленте заказов
-        #self.get_number_of_orders_today_in_order_feed()
-        #self.find_element_located(OrderFeedLocators.ORDER_NUMBER_IN_WORK, 100)
         order_number_in_work_actual = self.find_element_presented(OrderFeedLocators.ORDER_NUMBER_IN_WORK, 100).text
         number = order_number_in_work_actual
         return str(number)
